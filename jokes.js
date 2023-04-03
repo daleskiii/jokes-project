@@ -163,7 +163,7 @@ yesInput.addEventListener("click", (event) => {
       div.append((document.createElement("p").textContent = "API WILDIN RN"));
 
       const errorButton = document.createElement("input");
-      errorButton.setAttribute("value", "Back to Homepage");
+      errorButton.setAttribute("value", "Pull up later");
       errorButton.setAttribute("type", "button");
       errorButton.setAttribute("id", "errorbttn");
       div.append(errorButton);
