@@ -96,9 +96,11 @@ p#answer {
   font-weight: 600;
 }
 
-div#api-error {
+div#error-message {
+  display: grid;
   color: indigo;
   font-size: 70px;
+  justify-items: center;
 }
 
 input#errorbttn {
@@ -110,14 +112,32 @@ input#errorbttn {
   background-color: blueviolet;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 300px) {
   form.to-jokes {
+    text-align: center;
+  }
+  #error-message {
+    display: grid;
+    justify-items: center;
+    font-size: 50px;
     text-align: center;
   }
 }
 
-@media (max-width: 800) {
+@media (min-width: 900) {
   form.to-jokes {
     text-align: center;
+  }
+  #errorbttn {
+    text-align: center;
+    margin-right: 40px;
+    color: indigo;
+  }
+  #error-message {
+    display: grid;
+    justify-items: center;
+    font-size: 100px;
+    text-align: center;
+    color: SADDLEBROWN;
   }
 }

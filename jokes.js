@@ -100,18 +100,6 @@ yesInput.addEventListener("click", (event) => {
 
             if (currentQuestion) {
               newQuestion();
-              const newNextQuestionbutton = document.createElement("button");
-              newNextQuestionbutton.innerText = "Next Question";
-              newNextQuestionbutton.setAttribute("id", "Next-quest-bttn");
-              newNextQuestionbutton.addEventListener("click", () => {
-                questionIndex++;
-                currentQuestion = questionAnswer[questionIndex];
-                hasAnswered = false;
-              });
-            }
-
-            if (currentQuestion) {
-              newQuestion();
             } else {
               yayResponse.innerHTML = "No more Questions";
             }
@@ -128,13 +116,20 @@ yesInput.addEventListener("click", (event) => {
             homepage.click();
           });
 
+          const newNextQuestionbutton = document.createElement("button");
+          newNextQuestionbutton.innerText = "Next Question";
+          newNextQuestionbutton.setAttribute("id", "Next-quest-bttn");
+          newNextQuestionbutton.addEventListener("click", () => {
+            questionIndex++;
+            currentQuestion = questionAnswer[questionIndex];
+            hasAnswered = false;
+          });
           yayResponse.innerHTML = "";
           yayResponse.append(question);
           yayResponse.append(answerInput);
           yayResponse.append(submitBttn);
           yayResponse.append(answer);
           yayResponse.append(otherPageButton);
-          yayResponse.append(newNextQuestionbutton);
         }
 
         newQuestion();
@@ -163,9 +158,9 @@ yesInput.addEventListener("click", (event) => {
       console.log(error);
       const body = document.querySelector("body");
       const div = document.createElement("div");
-      div.setAttribute("id", "api-error");
+      div.setAttribute("id", "error-message");
       body.append(div);
-      div.append((document.createElement("p").textContent = "API Wildin RN"));
+      div.append((document.createElement("p").textContent = "API WILDIN RN"));
 
       const errorButton = document.createElement("input");
       errorButton.setAttribute("value", "Back to Homepage");
@@ -182,7 +177,6 @@ yesInput.addEventListener("click", (event) => {
 
         homepage.click();
       });
+      yesInput.innerHTML = "";
     });
-
-  yesInput.innerHTML = "";
 });
