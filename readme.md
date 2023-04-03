@@ -9,3 +9,7 @@ Hello all, welcome to my Joke Project. This project main objective is to display
 2.  After I retrieved the API, I layed out my HTML and CSS and page
 
 3.  I then started creating dynamic behavior for user interaction through javascript.
+
+## Go check my site out
+
+[Jokes Project](https://daleskiii.github.io/jokes-project/)
