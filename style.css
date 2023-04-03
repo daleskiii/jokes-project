@@ -1,0 +1,110 @@
+body {
+  background-color: darkgoldenrod;
+}
+.jokes-card {
+  display: grid;
+  justify-items: center;
+}
+
+.second {
+  background-color: darkgoldenrod;
+}
+
+form.to-jokes {
+  display: inline-grid;
+  justify-items: center;
+  font-size: 4em;
+  color: darkslateblue;
+}
+
+label input[type="button"] {
+  width: fit-content;
+}
+
+input#yay {
+  color: darkslateblue;
+  background-color: darkgoldenrod;
+}
+
+input#nay {
+  background-color: darkslateblue;
+  color: goldenrod;
+}
+
+div#form {
+  display: grid;
+  justify-content: center;
+}
+
+p#quest-paragraph {
+  font-size: 40px;
+  color: maroon;
+  font-family: Alkatra;
+  text-align: center;
+}
+
+input#submitBttn {
+  background-color: inherit;
+  color: darkred;
+}
+#submitBttn:hover {
+  background-color: indigo;
+}
+
+input#answerInput {
+  background: inherit;
+  color: maroon;
+  margin-left: 100px;
+}
+#answerInput:hover {
+  background-color: indigo;
+}
+
+button#Next-quest-bttn {
+  margin-left: 150px;
+  background-color: inherit;
+  color: darkred;
+}
+
+#Next-quest-bttn:hover {
+  background-color: indigo;
+}
+
+p#wrong-answ-resp {
+  margin-left: 100px;
+  color: darkred;
+}
+
+button#home-page-bttn {
+  margin-left: 75px;
+  background-color: inherit;
+  color: darkred;
+}
+
+#home-page-bttn:hover {
+  background-color: indigo;
+}
+
+#other-pg-bttn {
+  margin-left: 75px;
+  background-color: inherit;
+  color: darkred;
+}
+p#answer {
+  margin-left: 75px;
+  font-weight: 600;
+}
+
+div#api-error {
+  color: indigo;
+  font-size: 70px;
+}
+
+input#errorbttn {
+  background-color: inherit;
+  color: indigo;
+}
+
+#errorbttn:hover {
+  background-color: blueviolet;
+}
