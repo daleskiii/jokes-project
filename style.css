@@ -134,6 +134,9 @@ input#errorbttn {
     font-size: 50px;
     text-align: center;
   }
+  a#homePage-link {
+    color: darkgreen;
+  }
 }
 
 @media (min-width: 900) {
