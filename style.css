@@ -1,6 +1,10 @@
 body {
   background-color: darkgoldenrod;
 }
+#img {
+  width: 400px;
+}
+
 .jokes-card {
   display: grid;
   justify-items: center;
@@ -84,6 +88,14 @@ button#home-page-bttn {
 
 #home-page-bttn:hover {
   background-color: indigo;
+}
+
+a#homePage-link {
+  color: darkgreen;
+}
+
+#homePage-link:hover {
+  background-color: gray;
 }
 
 #other-pg-bttn {
