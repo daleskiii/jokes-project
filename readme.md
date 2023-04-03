@@ -4,7 +4,7 @@ Hello folks, welcome to my **Joke Project**. This project main objective is to d
 
 ## Instructions
 
-1.  To set up the this project, I first retrieved a joke the a API from [Rapid Api](https://rapidapi.com/moussasaidi01/api/jokes34)
+1.  To set up the this project, I first retrieved a joke API from [Rapid Api](https://rapidapi.com/moussasaidi01/api/jokes34)
 
 2.  After I retrieved the API, I layed out my HTML and CSS and pages.
 
