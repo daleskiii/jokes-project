@@ -108,3 +108,9 @@ input#errorbttn {
 #errorbttn:hover {
   background-color: blueviolet;
 }
+
+@media (max-width: 600px) {
+  form.to-jokes {
+    text-align: center;
+  }
+}
