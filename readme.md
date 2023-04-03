@@ -1,6 +1,6 @@
 # Daleskii's Joke Project
 
-Hello folks, welcome to my **Joke Project**. This project main objective is to display a joke if the user decides to do so, also allows the user to answer the joke. The app is suppose to allow the reader to click through questions. If the user at any point doesnt decides to do any, they can always click to go back to the home page.
+Hello folks, welcome to my **Joke Project**. This project main objective is to display a joke if the user decides to do so, also allows the user to answer the joke. The app is suppose to allow the reader to click through questions. If the user at any point doesn't decides to do anything, they can always click to go back to the home page.
 
 ## Instructions
 
