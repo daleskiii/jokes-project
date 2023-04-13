@@ -46,7 +46,7 @@ yesInput.addEventListener("click", (event) => {
           questionAnswer.push(newElement);
         } else {
           const obj = {
-            joke: joke,
+            question: joke,
           };
           questionAnswer.push(obj);
         }
@@ -61,7 +61,11 @@ yesInput.addEventListener("click", (event) => {
 
         function newQuestion() {
           const question = document.createElement("P");
-          question.innerText = currentQuestion.question;
+          if (currentQuestion.question.endsWith(".")) {
+            question.innerText = `${currentQuestion.question}`;
+          } else {
+            question.innerText = `${currentQuestion.question}?`;
+          }
           question.setAttribute("id", "quest-paragraph");
           const answerInput = document.createElement("input");
           answerInput.type = "text";
@@ -103,6 +107,7 @@ yesInput.addEventListener("click", (event) => {
             } else {
               yayResponse.innerHTML = "No more Questions";
             }
+            nextQuestionbutton.style.display = "none";
           });
 
           const otherPageButton = document.createElement("button");
@@ -116,41 +121,39 @@ yesInput.addEventListener("click", (event) => {
             homepage.click();
           });
 
-          const newNextQuestionbutton = document.createElement("button");
-          newNextQuestionbutton.innerText = "Next Question";
-          newNextQuestionbutton.setAttribute("id", "Next-quest-bttn");
-          newNextQuestionbutton.addEventListener("click", () => {
-            questionIndex++;
+          const lastQuestionButton = document.createElement("button");
+          lastQuestionButton.innerText = "LastQuestion";
+          lastQuestionButton.setAttribute("id", "last-page");
+          lastQuestionButton.addEventListener("click", () => {
+            questionIndex--;
             currentQuestion = questionAnswer[questionIndex];
             hasAnswered = false;
+            if (currentQuestion) {
+              newQuestion();
+            }
           });
+
           yayResponse.innerHTML = "";
-          yayResponse.append(question);
-          yayResponse.append(answerInput);
-          yayResponse.append(submitBttn);
-          yayResponse.append(answer);
-          yayResponse.append(otherPageButton);
-        }
 
-        newQuestion();
-
-        const nextQuestionbutton = document.createElement("button");
-        nextQuestionbutton.innerText = "Next Question";
-        nextQuestionbutton.setAttribute("id", "Next-quest-bttn");
-        nextQuestionbutton.addEventListener("click", () => {
-          questionIndex++;
-          currentQuestion = questionAnswer[questionIndex];
-          hasAnswered = false;
-
-          if (currentQuestion) {
-            newQuestion();
+          console.log(question);
+          if (currentQuestion.hasOwnProperty("answer")) {
+            yayResponse.append(question);
+            yayResponse.append(answerInput);
+            yayResponse.append(submitBttn);
+            yayResponse.append(answer);
+            yayResponse.append(otherPageButton);
+            yayResponse.append(lastQuestionButton);
+            yayResponse.append(nextQuestionbutton);
           } else {
-            yayResponse.innerHTML = "No more Questions";
+            yayResponse.append(question);
+            yayResponse.append(otherPageButton);
+            yayResponse.append(lastQuestionButton);
+            yayResponse.append(nextQuestionbutton);
           }
-        });
-
-        yayResponse.append(nextQuestionbutton);
+        }
+        newQuestion();
       }
+
       showAnswer(questionAnswer);
     })
 

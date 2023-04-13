@@ -103,6 +103,11 @@ a#homePage-link {
   background-color: inherit;
   color: darkred;
 }
+#last-page {
+  background-color: inherit;
+  color: darkred;
+}
+
 p#answer {
   margin-left: 75px;
   font-weight: 600;
